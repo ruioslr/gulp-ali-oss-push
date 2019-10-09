@@ -1,6 +1,6 @@
 {
   "name": "gulp-ali-oss-push",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a gulp plugin to push file to ali-oss",
   "main": "index.js",
   "author": "ruios",
