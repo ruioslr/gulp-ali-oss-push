@@ -1,5 +1,5 @@
 {
-  "name": "gulp-ali-oss-upload",
+  "name": "gulp-ali-oss-push",
   "version": "0.0.1",
   "description": "a gulp plugin to push file to ali-oss",
   "main": "index.js",
@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ruioslr/gulp-ali-oss-upload.git"
+    "url": "https://github.com/ruioslr/gulp-ali-oss-push.git"
   },
   "dependencies": {
     "ali-oss": "^6.1.1",
