@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "node"
+deploy:
+  provider: npm
+  email: ruioslr@163.com
+  api_key: "7b85b060-15cd-4962-835e-f2fe00115a73"
+  skip_cleanup: true
+  on:
+    all_branches: true
