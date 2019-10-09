@@ -5,6 +5,7 @@ const through = require('through2');
 const mime = require('mime');
 const OSS = require('ali-oss');
 const PluginError = require('gulp-util').PluginError;
+const vfs = require('vinyl-fs');
 
 const PLUGIN_NAME = 'gulp-ali-oss-upload';
 
@@ -34,7 +35,6 @@ function main(opts) {
     //         console.log(e);
     //     }
     // }
-
 
     const stream = through.obj(function (file, enc, next) {
         if (!file.isBuffer()) {
@@ -72,6 +72,9 @@ function main(opts) {
                 retryTimes++;
                 log(chalk.red('Retry deploy oss time ' + retryTimes + '...'));
                 // TODO implents retry
+                const failListTemp = [...failList];
+                failList = [];
+                vfs.src(failListTemp).pipe(stream);
             } else {
                 log(chalk.red('Deploy oss failed!'));
             }
