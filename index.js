@@ -72,9 +72,9 @@ function main(opts) {
                 retryTimes++;
                 log(chalk.red('Retry deploy oss time ' + retryTimes + '...'));
                 // TODO implents retry
-                const failListTemp = [...failList];
-                failList = [];
-                vfs.src(failListTemp).pipe(stream);
+                // const failListTemp = [...failList];
+                // failList = [];
+                // vfs.src(failListTemp).pipe(stream);
             } else {
                 log(chalk.red('Deploy oss failed!'));
             }
